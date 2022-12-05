@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { FaBookOpen } from 'react-icons/fa';
 import NoteContext from '../contexts/NoteContext';
 
-export default function NoteForm() {
+function NoteForm() {
   const { addNote } = useContext(NoteContext);
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
@@ -25,7 +25,7 @@ export default function NoteForm() {
 
   return (
     <div className="flex flex-col gap-4 px-4 z-20">
-      <h3 className="uppercase text-[#BBE1FA] flex flex-row justify-between items-center">
+      <h3 className="uppercase text-[#BBE1FA] text-lg font-bold flex flex-row justify-between items-center">
         Create Todo
         {' '}
         <FaBookOpen />
@@ -47,3 +47,5 @@ export default function NoteForm() {
     </div>
   );
 }
+
+export default NoteForm;

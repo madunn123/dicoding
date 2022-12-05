@@ -12,7 +12,7 @@ function App() {
     <NoteProvider value={notesValue}>
       <div className="flex flex-col">
         <Header />
-        <main className="flex pt-20 flex-col gap-20 relative overflow-hidden">
+        <main className="flex pt-20 flex-col gap-20 relative overflow-hidden px-10">
           <div className="absolute -top-10 left-0">
             <div className="bg-[#3282B8] w-24 h-24 rounded-full" />
           </div>

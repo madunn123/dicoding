@@ -21,7 +21,7 @@ export default function NoteList({ archived = false }) {
                 <p className="note-body">{note.body}</p>
               </div>
               <div className="flex flex-row items-center justify-center gap-4">
-                <button type="button" className="bg-red-600 hover:bg-red-700 duration-700 text-white py-2 capitalize font-semibold rounded-md w-[100px]" onClick={() => deleteNote(note.id)}>hapus</button>
+                <button type="button" className="bg-red-800 hover:bg-red-700 duration-700 text-white py-2 capitalize font-semibold rounded-md w-[100px]" onClick={() => deleteNote(note.id)}>hapus</button>
                 <button type="button" className="bg-[#1B262C] hover:bg-black duration-700 text-white py-2 capitalize font-semibold rounded-md w-[100px]" onClick={() => archiveNote(note.id)}>{archived ? 'remove' : 'simpan'}</button>
               </div>
 
@@ -37,7 +37,7 @@ export default function NoteList({ archived = false }) {
         </div>
       )
       : (
-        <p className="empty-note">Tidak ada catatan</p>
+        <p className="empty-note text-red-600 px-4">Tidak ada catatan</p>
       )
   );
 }
