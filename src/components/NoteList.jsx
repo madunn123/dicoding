@@ -20,9 +20,10 @@ export default function NoteList({ archived = false }) {
               <div className="h-[200px]">
                 <p className="note-body">{note.body}</p>
               </div>
-              <div className="flex flex-row items-center justify-center gap-4">
+              <div className="flex flex-row items-center relative z-20 justify-center gap-4">
                 <button type="button" className="bg-red-800 hover:bg-red-700 duration-700 text-white py-2 capitalize font-semibold rounded-md w-[100px]" onClick={() => deleteNote(note.id)}>hapus</button>
                 <button type="button" className="bg-[#1B262C] hover:bg-black duration-700 text-white py-2 capitalize font-semibold rounded-md w-[100px]" onClick={() => archiveNote(note.id)}>{archived ? 'remove' : 'simpan'}</button>
+                <button type="button" className="bg-[#BBE1FA] duration-700 text-black py-2 capitalize font-semibold rounded-md w-[100px]">View</button>
               </div>
 
               <div className="absolute -bottom-6 -left-8">
